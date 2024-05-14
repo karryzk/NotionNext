@@ -278,7 +278,7 @@ const getSEOMeta = (props, router, locale) => {
 {siteConfig('PTENGINE_TAG') && (
   <meta
     name='ptengine-tag'
-    content={siteConfig('https://js.ptengine.com/3cb3x6mw.js')}
+    content={siteConfig('PTENGINE_TAG')}
   />
 )}
 
