@@ -10,6 +10,7 @@ import { useEffect } from 'react'
  * @param {*} param0
  * @returns
  */
+
 const GlobalHead = props => {
   const { children, siteInfo, post, NOTION_CONFIG } = props
   let url = siteConfig('PATH')?.length
@@ -274,5 +275,11 @@ const getSEOMeta = (props, router, locale) => {
       }
   }
 }
+{siteConfig('PTENGINE_TAG') && (
+  <meta
+    name='ptengine-tag'
+    content={siteConfig('https://js.ptengine.com/3cb3x6mw.js')}
+  />
+)}
 
 export default GlobalHead
