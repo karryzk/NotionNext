@@ -101,75 +101,48 @@ const GlobalHead = props => {
     })
   }, [])
 
-  return (
-    <Head>
-      <link rel='icon' href={favicon} />
-      <title>{title}</title>
-      <meta name='theme-color' content={BACKGROUND_DARK} />
+return (
+  <Head>
+    <link rel='icon' href={favicon} />
+    <title>{title}</title>
+    <meta name='theme-color' content={BACKGROUND_DARK} />
+    <meta
+      name='viewport'
+      content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0'
+    />
+    <meta name='robots' content='follow, index' />
+    <meta charSet='UTF-8' />
+    {SEO_GOOGLE_SITE_VERIFICATION && (
       <meta
-        name='viewport'
-        content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0'
+        name='google-site-verification'
+        content={SEO_GOOGLE_SITE_VERIFICATION}
       />
-      <meta name='robots' content='follow, index' />
-      <meta charSet='UTF-8' />
-      {SEO_GOOGLE_SITE_VERIFICATION && (
-        <meta
-          name='google-site-verification'
-          content={SEO_GOOGLE_SITE_VERIFICATION}
-        />
-      )}
-      {SEO_BAIDU_SITE_VERIFICATION && (
-        <meta
-          name='baidu-site-verification'
-          content={SEO_BAIDU_SITE_VERIFICATION}
-        />
-      )}
-      <meta name='keywords' content={keywords} />
-      <meta name='description' content={description} />
-      <meta property='og:locale' content={lang} />
-      <meta property='og:title' content={title} />
-      <meta property='og:description' content={description} />
-      <meta property='og:url' content={url} />
-      <meta property='og:image' content={image} />
-      <meta property='og:site_name' content={title} />
-      <meta property='og:type' content={type} />
-      <meta name='twitter:card' content='summary_large_image' />
-      <meta name='twitter:description' content={description} />
-      <meta name='twitter:title' content={title} />
-
-      <link rel='icon' href={BLOG_FAVICON} />
-
-      {COMMENT_WEBMENTION_ENABLE && (
-        <>
-          <link
-            rel='webmention'
-            href={`https://webmention.io/${COMMENT_WEBMENTION_HOSTNAME}/webmention`}
-          />
-          <link
-            rel='pingback'
-            href={`https://webmention.io/${COMMENT_WEBMENTION_HOSTNAME}/xmlrpc`}
-          />
-          {COMMENT_WEBMENTION_AUTH && (
-            <link href={COMMENT_WEBMENTION_AUTH} rel='me' />
-          )}
-        </>
-      )}
-
-      {ANALYTICS_BUSUANZI_ENABLE && (
-        <meta name='referrer' content='no-referrer-when-downgrade' />
-      )}
-      {meta?.type === 'Post' && (
-        <>
-          <meta property='article:published_time' content={meta.publishDay} />
-          <meta property='article:author' content={siteConfig('AUTHOR')} />
-          <meta property='article:section' content={category} />
-          <meta property='article:publisher' content={FACEBOOK_PAGE} />
-        </>
-      )}
-      {children}
-    </Head>
-  )
-}
+    )}
+    {SEO_BAIDU_SITE_VERIFICATION && (
+      <meta
+        name='baidu-site-verification'
+        content={SEO_BAIDU_SITE_VERIFICATION}
+      />
+    )}
+    <meta name='keywords' content={keywords} />
+    <meta name='description' content={description} />
+    <meta property='og:locale' content={lang} />
+    <meta property='og:title' content={title} />
+    <meta property='og:description' content={description} />
+    <meta property='og:url' content={url} />
+    <meta property='og:image' content={image} />
+    <meta property='og:site_name' content={title} />
+    <meta property='og:type' content={type} />
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:description' content={description} />
+    <meta name='twitter:title' content={title} />
+    <link rel='icon' href={BLOG_FAVICON} />
+    {/* Ptengine Tag */}
+    <script src="https://js.ptengine.com/21nbhus9.js" async defer></script>
+    {/* End Ptengine Tag */}
+    {children}
+  </Head>
+)
 
 /**
  * 获取SEO信息
