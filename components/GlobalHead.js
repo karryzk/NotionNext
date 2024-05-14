@@ -128,9 +128,6 @@ const GlobalHead = props => {
       <meta name='twitter:card' content='summary_large_image' />
       <meta name='twitter:description' content={description} />
       <meta name='twitter:title' content={title} />
-      <!-- Ptengine Tag -->
-      <script src="https://js.ptengine.com/21nbhus9.js"></script>
-      <!-- End Ptengine Tag -->
       <link rel='icon' href={BLOG_FAVICON} />
 
       {COMMENT_WEBMENTION_ENABLE && (
