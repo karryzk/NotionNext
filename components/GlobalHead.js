@@ -129,7 +129,11 @@ const GlobalHead = props => {
       <meta name='twitter:description' content={description} />
       <meta name='twitter:title' content={title} />
       <link rel='icon' href={BLOG_FAVICON} />
-      <script src="https://js.ptengine.jp/4aidzp0q.js"></script>
+     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-W92CBL8B');</script>
        
       {COMMENT_WEBMENTION_ENABLE && (
         <>
