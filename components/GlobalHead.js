@@ -130,7 +130,6 @@ const GlobalHead = props => {
       <meta name='twitter:title' content={title} />
       <link rel='icon' href={BLOG_FAVICON} />
       <script src="https://js.ptengine.jp/3dboyxf1.js"><script>
-      <!-- Begin Mieruca Embed Code -->
         <script type="text/javascript" id="mierucajs">
         window.__fid = window.__fid || [];__fid.push([917393364]);
         (function() {
@@ -138,7 +137,6 @@ const GlobalHead = props => {
         setTimeout(mieruca, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent("onload", mieruca) : window.addEventListener("load", mieruca, false)) : mieruca();
         })();
         </script>
-      <!-- End Mieruca Embed Code -->
        
       {COMMENT_WEBMENTION_ENABLE && (
         <>
