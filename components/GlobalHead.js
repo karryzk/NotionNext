@@ -130,13 +130,36 @@ const GlobalHead = props => {
       <meta name='twitter:title' content={title} />
       <link rel='icon' href={BLOG_FAVICON} />
       <script src="https://js.ptengine.jp/3dboyxf1.js"><script>
-        <script type="text/javascript" id="mierucajs">
-        window.__fid = window.__fid || [];__fid.push([917393364]);
-        (function() {
-        function mieruca(){if(typeof window.__fjsld != "undefined") return; window.__fjsld = 1; var fjs = document.createElement('script'); fjs.type = 'text/javascript'; fjs.async = true; fjs.id = "fjssync"; var timestamp = new Date;fjs.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://hm.mieru-ca.com/service/js/mieruca-hm.js?v='+ timestamp.getTime(); var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(fjs, x); };
-        setTimeout(mieruca, 500); document.readyState != "complete" ? (window.attachEvent ? window.attachEvent("onload", mieruca) : window.addEventListener("load", mieruca, false)) : mieruca();
-        })();
-        </script>
+<script type="text/javascript" id="mierucajs">
+      window.__fid = window.__fid || [];
+      __fid.push([917393364]);
+      (function() {
+        function mieruca() {
+          if (typeof window.__fjsld !== "undefined") return;
+          window.__fjsld = 1;
+          var fjs = document.createElement('script');
+          fjs.type = 'text/javascript';
+          fjs.async = true;
+          fjs.id = "fjssync";
+          var timestamp = new Date();
+          fjs.src = (document.location.protocol === 'https:' ? 'https' : 'http') 
+            + '://hm.mieru-ca.com/service/js/mieruca-hm.js?v=' 
+            + timestamp.getTime();
+          var x = document.getElementsByTagName('script')[0];
+          x.parentNode.insertBefore(fjs, x);
+        }
+        setTimeout(mieruca, 500);
+        if (document.readyState !== "complete") {
+          if (window.attachEvent) {
+            window.attachEvent("onload", mieruca);
+          } else {
+            window.addEventListener("load", mieruca, false);
+          }
+        } else {
+          mieruca();
+        }
+      })();
+    </script>
        
       {COMMENT_WEBMENTION_ENABLE && (
         <>
