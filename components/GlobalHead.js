@@ -130,11 +130,15 @@ const GlobalHead = props => {
       <meta name='twitter:title' content={title} />
       <link rel='icon' href={BLOG_FAVICON} />
       <script src="https://js.ptengine.jp/3dboyxf1.js"><script>
-<!-- User Heat Tag -->
-<script type="text/javascript">
-(function(add, cla){window['UserHeatTag']=cla;window[cla]=window[cla]||function(){(window[cla].q=window[cla].q||[]).push(arguments)},window[cla].l=1*new Date();var ul=document.createElement('script');var tag = document.getElementsByTagName('script')[0];ul.async=1;ul.src=add;tag.parentNode.insertBefore(ul,tag);})('//uh.nakanohito.jp/uhj2/uh.js', '_uhtracker');_uhtracker({id:'uhY9oHXCuQ'});
-</script>
-<!-- End User Heat Tag -->
+      <script type="text/javascript">
+        window._mfq = window._mfq || [];
+        (function() {
+          var mf = document.createElement("script");
+          mf.type = "text/javascript"; mf.defer = true;
+          mf.src = "//cdn.mouseflow.com/projects/6faca729-8b29-4171-8a70-ad6fe0224a99.js";
+          document.getElementsByTagName("head")[0].appendChild(mf);
+        })();
+      </script>
        
       {COMMENT_WEBMENTION_ENABLE && (
         <>
